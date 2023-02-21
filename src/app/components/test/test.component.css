@@ -1,0 +1,24 @@
+.bar .line {
+  background-color: gray;
+  height: 5px;
+  width: 80px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.bar.length .line {
+  background-color: red;
+}
+
+.bar.weak .line:first-child {
+  background-color: red;
+}
+
+.bar.medium .line:nth-child(-n + 2) {
+  background-color: yellow;
+}
+
+.bar.strong .line {
+  background-color: green;
+}

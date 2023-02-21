@@ -1,0 +1,23 @@
+{{ password | json }}
+
+<br />
+
+<form>
+  <div>
+    <label>Enter password</label>
+    <input type="password" name="password" [(ngModel)]="password" />
+    <div
+      class="bar"
+      [ngClass]="{
+        length: getStrengthValue() === -1,
+        weak: getStrengthValue() === 1,
+        medium: getStrengthValue() === 2,
+        strong: getStrengthValue() === 3
+      }"
+    >
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</form>
